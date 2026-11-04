@@ -24,7 +24,12 @@ def err(msg, code=400): return jsonify(error=msg), code
 
 def current_user():
     uid = request.headers.get("X-User-Id", "").strip()
-    u = db.get("users", uid) if 8 <= len(uid) <= 64 else None
+    if not (8 <= len(uid) <= 64):
+        return None
+    u = db.get("users", uid)
+    if not u:
+        u = game.new_user(uid, "Eco Hero", "", dt.datetime.now(TZ).isoformat())
+        db.set("users", uid, u)
     return game.ensure(u) if u else None
 
 
