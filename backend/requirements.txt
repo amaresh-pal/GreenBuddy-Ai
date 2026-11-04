@@ -1,0 +1,7 @@
+flask>=3.0
+flask-cors>=4.0
+python-dotenv>=1.0
+requests>=2.31
+firebase-admin>=6.5
+gunicorn>=22.0
+tzdata

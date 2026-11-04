@@ -1,0 +1,30 @@
+# Environments & credentials
+.env
+.env*.local
+backend/.env
+frontend/.env
+serviceAccountKey.json
+backend/serviceAccountKey.json
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Frontend build
+dist/
+build/
+.cache/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
