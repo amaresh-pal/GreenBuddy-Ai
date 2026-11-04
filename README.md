@@ -7,7 +7,7 @@ Backend (Terminal 1):
     cp .env.example .env
     python app.py            # http://localhost:5000
 Frontend (Terminal 2):
-    cd frontend && npm install && npm run dev    # http://localhost:5173
+    cd frontend && npm install && npm run dev   # http://localhost:5173
 
 Without Firebase credentials the backend uses an in-memory store (data resets on restart).
 
